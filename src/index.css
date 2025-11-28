@@ -1,0 +1,72 @@
+/* Base reset and global styles that rely entirely on theme variables */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--bg-gradient);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.ghost-chip {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(141, 92, 84, 0.35);
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 140ms ease, box-shadow 140ms ease, transform 100ms ease;
+  box-shadow: 0 8px 18px rgba(165, 106, 100, 0.12);
+}
+
+.ghost-chip:hover {
+  background: rgba(255, 255, 255, 0.92);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(165, 106, 100, 0.2);
+}
+
+:root {
+  /* Shared responsive breakpoints (desktop styles remain the default) */
+  --bp-md: 960px;
+  --bp-sm: 768px;
+  --bp-xs: 480px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}

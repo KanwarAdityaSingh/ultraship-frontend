@@ -1,0 +1,77 @@
+.form-dialog {
+  width: min(640px, 100% - 32px);
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+  background:
+    radial-gradient(22rem 16rem at 0% 0%, var(--card-accent-1), transparent 62%),
+    var(--card-surface);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-5);
+}
+
+.form-header h2 {
+  margin: 0 0 var(--spacing-3) 0;
+  font-size: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-3);
+}
+
+.form-grid .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-grid label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+}
+
+.form-grid input {
+  height: 32px;
+  padding: 0 var(--spacing-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  font-size: 13px;
+}
+
+.form-grid .select-root {
+  width: 100%;
+}
+
+.form-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-2);
+}
+
+.form-footer .submit-btn {
+  height: 32px;
+  padding: 0 14px;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-dialog {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: var(--spacing-4);
+  }
+}
+
+

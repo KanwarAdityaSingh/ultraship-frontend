@@ -1,0 +1,70 @@
+.select-root {
+  position: relative;
+}
+
+.select-root.md {
+  width: 100%;
+}
+
+.select-root.sm {
+  width: 120px;
+}
+
+.select-trigger {
+  width: 100%;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-2);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.select-label.placeholder {
+  color: var(--color-muted);
+}
+
+.select-chevron {
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+.select-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  padding: 4px;
+  z-index: 10;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.select-option {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.select-option:hover {
+  background: rgba(165, 106, 100, 0.06);
+}
+
+.select-option.active {
+  background: rgba(165, 106, 100, 0.1);
+}
+
+
